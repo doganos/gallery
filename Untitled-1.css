@@ -22,13 +22,55 @@ img {
 
    
 #content {
+	
     background-color: #FFF;
+	height:100%;
     width: 50%;
     float: left;
+	
 }
+
+
 #sidebar {
-    background-color: #FFF;
-    width: 50%;
-    float: right;
+	font-weight: bold;
+	font-size: 20px;
+	color: #339999;
+	background-color: #FFF;
+	width: 49%;
+	float: right;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #FFF;
+	height: 100%;
     
 }
+
+#footer {
+	height: auto;
+	width: 100%;
+	
+	clear: both;
+}
+
+.green{
+	color:green;
+	}
+
+.red {color: black !important;}
+@-webkit-keyframes colours {
+	  0% {color: #FF0004;}
+	
+	 50% {color: black;}
+	 
+	100% {color: #FF0004;}
+}
+	
+
+.red{
+	-webkit-animation-direction: normal;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-name: colours;
+	-webkit-animation-timing-function: ease;
+
+	}
