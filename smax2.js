@@ -1,7 +1,7 @@
 
 
 
-        var a;
+          var a;
         var N;
         var Eb;
         var den;
@@ -42,6 +42,7 @@
             n1 = Number(document.getElementById("n1").value);
             d2 = Number(document.getElementById("d2").value);
             n2 = Number(document.getElementById("n2").value);
+			
 
 
         }
@@ -107,11 +108,14 @@
             smaxResult = (s0 / (b * s)) + (U / (2 * b * s)) + ((den * Math.pow(u, 2)) / 9810) + (Eb * (s / d1));
             console.log(smaxResult);
             var smaxResult2 = smaxResult.toFixed(3)
+			var elem = document.getElementById('smaxResult');
 			if(smaxResult<sigma){
 			
-            document.getElementById('smaxResult').innerHTML = "Η μέγιστη τάση είναι: " + smaxResult2 + " Ο ιμάντας αντέχει!";
+            elem.innerHTML = "Η μέγιστη τάση είναι: " + smaxResult2 + "<σ(επ)  <span>Ο ιμάντας αντέχει!";
+			elem.querySelector('span').classList.add("green");
 			} else{
-			document.getElementById('smaxResult').innerHTML = "Η μέγιστη τάση είναι: " + smaxResult2 + " Ο ιμάντας δεν αντέχει!";
+			elem.innerHTML = "Η μέγιστη τάση είναι: " + smaxResult2 + ">σ(επ)  <span>Ο ιμάντας δεν αντέχει!";
+			elem.querySelector('span').classList.add("red");
 			}
 			
 			
@@ -125,7 +129,5 @@
                 }
             }
         }
-
-    
 
   
